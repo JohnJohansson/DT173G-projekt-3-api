@@ -1,31 +1,31 @@
 # API
 
-So this is part two of the API assigment, sadly its not working exactly as it should online.
+This is a CRUD-JSON application with suport for three API's.
 
-On this free hosting site I can consume the API but not make any changes, it did however let me
+They can be used to host a online resume for a webb developer with earlier work experainces, the name of the 
 
-at one time add an extra course: https://doggobloggo12.000webhostapp.com/consume/pub/index.html
+jobb, your title, start and end date, earlier educations, the name of the school, the course and start and
 
-delet just gives me an error message though, one that I googled and it just dosent help, it can 
+endate and earlier webbpages you have done, what date they where made, thier title, a description and a url 
 
-be the code, it can be the browsers it can be the hosting services. I dont know.
+to the page in question. With this file is an install file so you easily can get started.
 
-Anyways so what these files do is well hosting all the files for the api, te database concetions and so on,
+**Install.php**
 
-I have an install file so you can easily recreate the databae and fill it with courses.
+Start by cloning the repo, then when you have it go into the install file go to line 46 and change the line 
 
-I have a switch case (curtesy of my teachers) with one GET one DELETE one POST and one PUT command,
+'pass'. This is what your looking for "//hasshing the password to make it safe
+//OBS change the password to whatever you want it to be and dont uplode this file with the live server
+$password = 'pass';
+$hash = password_hash($password, PASSWORD_DEFAULT);"
 
-This will let my other file 5.1 send request about changings a colum in the database, delete one, reading 
+The 'pass' will be your password, it will be encrypted by the install file when you run it, make sure if you 
 
-one or all of them or adding a new one to the API, the api is in J-son format. Here you can see that 
+use the code for a live server to remove the install file after using it to keep your password safe. 
 
-https://doggobloggo12.000webhostapp.com/api/api.php I have atest file that prints out the data to the screen,
+This is meant to be used togheter with a Admin page I have done and a page for consuming the api's.
 
-and also updates a course with id 3 if that exist. Also a config file with the database connectoion. 
+Ypu can find the Admin page here = https://github.com/JohnJohansson/DT173G-projekt-2-admin
 
-The class file have all the good stuff that let the switch case work, its from there we read out and put in 
+And the page to read out the api for public use here = https://github.com/JohnJohansson/DT173G-projekt-1
 
-stuff from the database table. Oh and heres the homepage on the schools server, as you can see it dosent 
-
-work at all and I have no real idea why: https://studenter.miun.se/~tijo1901/DT173G/moment%205.2/pub/
